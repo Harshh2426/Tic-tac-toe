@@ -157,22 +157,27 @@ body.player2 .announce2 {
 }
 
 @media only screen and (max-width: 500px) {
-  body {
-    background-color: red;
-  }
   .container{
     width: 80%;
+    max-height: 90vh;
   }
   .heading h1 {
-    font-size: 3.5rem;
+    text-align: center;
+    font-size: 3rem;
     padding: 1rem;
+    border-bottom: 4px solid #fff;
   }
   .box {
-    padding: 1rem;
+    padding: 3rem;
+  }
+  .child{
+    height: 2rem;
+    width: 2rem;
+    padding: 2.2rem;
   }
 
   .content {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 800;
   }
   .playerTurn {
