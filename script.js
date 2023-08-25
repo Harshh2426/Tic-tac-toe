@@ -91,12 +91,15 @@ box.addEventListener("click", (e) => {
   if (winnerCheker(row, col)) {
     document.body.classList.add("winner");
     if (flag === 0) {
-        document.body.classList.add("player1");
-    }
-    else{
-        document.body.classList.add("player2");
-
+      document.body.classList.add("player1");
+    } else {
+      document.body.classList.add("player2");
     }
   }
   flagSwapper();
+});
+
+let reload_btn = document.querySelector(".reload");
+reload_btn.addEventListener("click", () => {
+  location.reload();
 });

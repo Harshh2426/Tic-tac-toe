@@ -124,7 +124,7 @@ body.winner::after {
 .playerTurn.active .playerTurnShow2 {
   display: flex;
 }
-.dummy{
+.dummy {
   position: absolute;
   font-size: 4rem;
   z-index: 3;
@@ -134,23 +134,35 @@ body.winner::after {
   color: var(--content);
   text-shadow: 1px 3px 15px black;
 }
-.announce1{
+.announce1 {
   display: none;
 }
-.announce2{
+.announce2 {
   display: none;
 }
 body.winner .container {
   filter: blur(5px);
 }
-.dummy_child{
+.dummy_child {
   text-align: center;
 }
-body.player1 .announce1{
+body.player1 .announce1 {
   display: block;
 }
-body.player2 .announce2{
+body.player2 .announce2 {
   display: block;
+}
+.reload {
+  position: absolute;
+  background-color: var(--container-color);
+  color: var(--heading-color);
+  top: 0;
+  left: 10px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 @keyframes zoomer {
@@ -160,7 +172,7 @@ body.player2 .announce2{
 }
 
 @media only screen and (max-width: 500px) {
-  .container{
+  .container {
     width: 80%;
     max-height: 90vh;
   }
@@ -173,7 +185,7 @@ body.player2 .announce2{
   .box {
     padding: 3rem;
   }
-  .child{
+  .child {
     height: 2rem;
     width: 2rem;
     padding: 2.2rem;
@@ -198,23 +210,9 @@ body.player2 .announce2{
     color: var(--player);
   }
   .dummy {
-    position: absolute;
     font-size: 2rem;
-    z-index: 3;
-    text-transform: uppercase;
-    animation: zoomer 0.5s infinite linear;
-    color: var(--content);
-    text-shadow: 1px 3px 15px black;
   }
-  body.winner .container {
-    filter: blur(5px);
+  .reload{
+    font-size: 2rem;
   }
-
-  
-  @keyframes zoomer {
-    100% {
-      transform: scale(1.1);
-    }
-  }
-
 }
