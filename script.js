@@ -88,7 +88,6 @@ box.addEventListener("click", (e) => {
   e.target.children[0].innerHTML = `${flag}`;
   indexSetter(row, col);
   playerTurnSwapper.classList.toggle("active");
-  console.log(ticArray);
   if (winnerCheker(row, col)) {
     document.body.classList.add("winner");
     if (flag === 0) {

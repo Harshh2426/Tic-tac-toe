@@ -124,7 +124,7 @@ body.winner::after {
 .playerTurn.active .playerTurnShow2 {
   display: flex;
 }
-.dummy {
+.dummy{
   position: absolute;
   font-size: 4rem;
   z-index: 3;
@@ -134,19 +134,22 @@ body.winner::after {
   color: var(--content);
   text-shadow: 1px 3px 15px black;
 }
-.announce1 {
+.announce1{
   display: none;
 }
-.announce2 {
+.announce2{
   display: none;
 }
 body.winner .container {
   filter: blur(5px);
 }
-body.player1 .announce1 {
+.dummy_child{
+  text-align: center;
+}
+body.player1 .announce1{
   display: block;
 }
-body.player2 .announce2 {
+body.player2 .announce2{
   display: block;
 }
 
@@ -177,21 +180,21 @@ body.player2 .announce2 {
   }
 
   .content {
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 800;
   }
   .playerTurn {
     padding: 2rem;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
   }
   .playerTurn h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--player);
   }
   .playerTurn h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--player);
   }
   .dummy {
