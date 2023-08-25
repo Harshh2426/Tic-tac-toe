@@ -5,20 +5,18 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-:root{
-    --bg-color:rgb(94, 93, 93);
-    --heading-color:#fff;
-    --container-color: black;
-    --tic-border: #fff;
-    --content: #fff;
-    --player: #fff;
+:root {
+  --bg-color: rgb(94, 93, 93);
+  --heading-color: #fff;
+  --container-color: black;
+  --tic-border: #fff;
+  --content: #fff;
+  --player: #fff;
 }
 body {
   width: 100vw;
   height: 100vh;
   background-color: var(--bg-color);
-  height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,8 +35,8 @@ body.winner::after {
   background-size: cover;
 }
 .container {
-    border-radius: 5px;
-    box-shadow: 0px 2px 50px #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 50px #fff;
   background-color: var(--container-color);
   display: flex;
   align-items: center;
@@ -62,7 +60,6 @@ body.winner::after {
   height: 4rem;
   width: 4rem;
   padding: 3rem;
-  font-size: 3rem;
   position: relative;
   cursor: pointer;
 }
@@ -72,6 +69,8 @@ body.winner::after {
   top: 50%;
   color: var(--content);
   transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 800;
 }
 .child:nth-child(1) {
   border-left-color: transparent;
@@ -101,10 +100,7 @@ body.winner::after {
   border-bottom-color: transparent;
   border-right-color: transparent;
 }
-.content {
-  font-size: 3rem;
-  font-weight: 800;
-}
+
 .playerTurn {
   padding: 3rem;
   display: flex;
@@ -130,7 +126,7 @@ body.winner::after {
 }
 .dummy {
   position: absolute;
-  font-size: 4vmax;
+  font-size: 4rem;
   z-index: 3;
   /* display: none; */
   text-transform: uppercase;
@@ -138,25 +134,79 @@ body.winner::after {
   color: var(--content);
   text-shadow: 1px 3px 15px black;
 }
-.announce1{
-    display: none;
+.announce1 {
+  display: none;
 }
-.announce2{
-    display: none;
+.announce2 {
+  display: none;
 }
 body.winner .container {
   filter: blur(5px);
-
 }
 body.player1 .announce1 {
   display: block;
 }
-body.player2 .announce2{
-    display: block;
+body.player2 .announce2 {
+  display: block;
 }
 
 @keyframes zoomer {
   100% {
     transform: scale(1.2);
   }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+  .container{
+    width: 80%;
+  }
+  .heading h1 {
+    font-size: 3.5rem;
+    padding: 1rem;
+  }
+  .box {
+    padding: 1rem;
+  }
+
+  .content {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  .playerTurn {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .playerTurn h3 {
+    font-size: 2rem;
+    color: var(--player);
+  }
+  .playerTurn h2 {
+    font-size: 2rem;
+    color: var(--player);
+  }
+  .dummy {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 3;
+    text-transform: uppercase;
+    animation: zoomer 0.5s infinite linear;
+    color: var(--content);
+    text-shadow: 1px 3px 15px black;
+  }
+  body.winner .container {
+    filter: blur(5px);
+  }
+
+  
+  @keyframes zoomer {
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
 }
